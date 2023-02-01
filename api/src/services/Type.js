@@ -9,6 +9,7 @@ const getTypes = async () => {
       types = await Type.bulkCreate(results.map(({ name }) => ({ name })));
       return types.map(({dataValues})=>dataValues);
     }
+    return types
   } catch (error) {
     throw { status: 404, message: error }
   }
