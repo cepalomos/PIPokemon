@@ -4,6 +4,10 @@ GET http://localhost:3001/types HTTP/1.1
 POST http://localhost:3001/pokemons HTTP/1.1
 Content-Type: application/json
 
-{"user":{"name":"kawasase7","life":34,"attack":43,"defense":56,"speed":76,"height":89,"weight":45},"types":["fd12057f-e528-4c16-9204-ff5f04cab1f8","c6183e98-6154-41da-b9fc-47fbe48a9141"]}
+{"user":{"name":"kawasase","life":34,"attack":43,"defense":56,"speed":76,"height":89,"weight":45},"types":["05492485-ac1a-4d25-b8d9-7b8d0398e40b"]}
 
 ###
+GET http://localhost:3001/pokemons?name=kawasase HTTP/1.1
+
+###
+GET http://localhost:3001/pokemons HTTP/1.1
