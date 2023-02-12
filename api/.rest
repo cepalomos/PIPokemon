@@ -11,3 +11,9 @@ GET http://localhost:3001/pokemons?name=kawasase HTTP/1.1
 
 ###
 GET http://localhost:3001/pokemons HTTP/1.1
+
+###
+GET http://localhost:3001/pokemons/f3cb4cc5-fa43-41c0-9c69-4b8e610cd35c HTTP/1.1
+
+###
+GET http://localhost:3001/pokemons/22 HTTP/1.1

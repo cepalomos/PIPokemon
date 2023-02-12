@@ -1,4 +1,4 @@
-const {createPokemonDb,getPokemons} = require('../services/Pokemon')
+const {createPokemonDb,getPokemons,getPokemonPk} = require('../services/Pokemon')
 
 const postPokemon = async(req,res,next)=>{
   const data = req.body;
@@ -20,4 +20,14 @@ const getPokemon = async(req,res,next)=>{
   }
 };
 
-module.exports = {postPokemon,getPokemon}
+const getPokemonByPk = async (req,res,next)=>{
+  const {id} = req.params;
+  try {
+    const pokemon = await getPokemonPk(id);
+    res.status(200).json(pokemon);
+  } catch (error) {
+    next(error);
+  }
+}
+
+module.exports = {postPokemon,getPokemon,getPokemonByPk}
